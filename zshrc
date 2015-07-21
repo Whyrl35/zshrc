@@ -50,6 +50,8 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(bgnotify bower celery coffe colorize composer cp django docker git-flow grunt npm pel pip python tmux screen ssh-agent sudo symfony2 termitator debian gem ruby git)
 
+source $ZSH/oh-my-zsh.sh
+
 #############################################################
 #                        ZSH Conf                           #
 #############################################################
@@ -122,7 +124,7 @@ zstyle ':completion:*:processes' list-colors '=(#b)(?????)(#B)??????????????????
 
 domain=`hostname | cut -d '.' -f2-`
 
-if [ ${domain} -eq 'ovh.net' ]
+if [ ${domain} = 'ovh.net' ]
 then
     source ~/.ovhrc
 fi
