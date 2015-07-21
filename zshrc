@@ -39,6 +39,9 @@ alias vi='vim'
 #                       Oh My ZSH                           #
 #############################################################
 
+# To install oh my zsh : 
+# sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
