@@ -119,6 +119,22 @@ zstyle ':completion:*:processes' list-colors '=(#b)(?????)(#B)??????????????????
 =01;31=01;33'
 
 #############################################################
+#                     PowerLine Conf                        #
+#############################################################
+
+function _update_ps1()
+{  
+    if [ -e ~/development/powerline-zsh/powerline-zsh.py ]
+    then
+        export PROMPT="$(~/development/powerline-zsh/powerline-zsh.py $?)"
+    fi
+}
+precmd()
+{
+    _update_ps1
+}
+
+#############################################################
 #                        OVH Conf                           #
 #############################################################
 
