@@ -69,7 +69,7 @@ export  SAVEHIST=4096
 
 # SSH agent / KEYRING
 
-export  $(gnome-keyring-daemon --daemonize --start)
+which gnome-keyring-daemon 2>&1 > /dev/null && export  $(gnome-keyring-daemon --daemonize --start)
 
 # Key Binding
 
@@ -124,6 +124,10 @@ zstyle ':completion:*:processes' list-colors '=(#b)(?????)(#B)??????????????????
 #############################################################
 #                     PowerLine Conf                        #
 #############################################################
+
+# powerline can be found here :
+# https://github.com/carlcarl/powerline-zsh
+# mkdir -p development && cd development && git clone https://github.com/carlcarl/powerline-zsh
 
 function _update_ps1()
 {  
