@@ -127,9 +127,9 @@ zstyle ':completion:*:processes' list-colors '=(#b)(?????)(#B)??????????????????
 
 function _update_ps1()
 {  
-    if [ -e ~/development/powerline-zsh/powerline-zsh.py ]
+    if [ -e ~/development/zsh-powerline/zsh-powerline.py ]
     then
-        export PROMPT="$(~/development/powerline-zsh/powerline-zsh.py $?)"
+        export PROMPT="$(~/development/zsh-powerline/zsh-powerline.py $?)"
     fi
 }
 precmd()
