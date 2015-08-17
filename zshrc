@@ -18,7 +18,7 @@ limit   core 0
 
 # Alias
 
-alias ga='goaccess -i -m --double-decode -a --log-format="%h %^[%d:%t %^] \"%r\" %s %b \"%R\" \"%u\"" --date-format="%d/%b/%Y" --time-format="%H:%M:%S"'
+alias goaccess='goaccess -i -m --double-decode -a --log-format="%h %^[%d:%t %^] \"%r\" %s %b \"%R\" \"%u\"" --date-format="%d/%b/%Y" --time-format="%H:%M:%S"'
 
 alias ls='ls --color'
 alias grep='grep --color=auto'
