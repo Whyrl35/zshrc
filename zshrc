@@ -41,7 +41,7 @@ alias vi='vim'
 #                       Oh My ZSH                           #
 #############################################################
 
-# To install oh my zsh : 
+# To install oh my zsh :
 # sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Path to your oh-my-zsh configuration.
@@ -72,6 +72,7 @@ export  SAVEHIST=4096
 # SSH agent / KEYRING
 
 which gnome-keyring-daemon 2>&1 > /dev/null && export  $(gnome-keyring-daemon --daemonize --start)
+#ssh-agent | eval
 
 # Key Binding
 
@@ -132,7 +133,7 @@ zstyle ':completion:*:processes' list-colors '=(#b)(?????)(#B)??????????????????
 # mkdir -p development && cd development && git clone https://github.com/carlcarl/powerline-zsh
 
 function _update_ps1()
-{  
+{
     if [ -e ~/development/zsh-powerline/zsh-powerline.py ]
     then
         export PROMPT="$(~/development/zsh-powerline/zsh-powerline.py $?)"
@@ -147,9 +148,7 @@ precmd()
 #                        OVH Conf                           #
 #############################################################
 
-domain=`hostname | cut -d '.' -f2-`
-
-if [ ${domain} = 'ovh.net' ]
+if [[ $(hostname) = "desk"* ]]
 then
     source ~/.ovhrc
 fi
