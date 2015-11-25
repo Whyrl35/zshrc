@@ -37,7 +37,7 @@ alias mkdir='nocorrect mkdir'   # no spelling correction on mkdir
 alias v='vim'
 alias vi='vim'
 
-alias keepass='kp -d ~/hubic/OVH/Keepass/keepass.kdb'
+alias keepass='kp -d ~/hubic/OVH/Keepass/keepassx.kdb'
 
 #############################################################
 #                       Oh My ZSH                           #
