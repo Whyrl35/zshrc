@@ -10,7 +10,7 @@ export TERM='xterm-256color'
 #############################################################
 
 # Customize to your needs...
-export PATH=/usr/local/rvm/bin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl
+export PATH=$HOME/.local/bin:/usr/local/rvm/bin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl
 
 # umask and nocore
 umask   022
