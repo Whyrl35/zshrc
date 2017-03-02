@@ -55,7 +55,7 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bgnotify bower celery coffe colorize composer cp django docker git-flow grunt npm pel pip python tmux screen ssh-agent sudo symfony2 termitator debian gem ruby git)
+plugins=(bgnotify bower celery coffe colorize cp django docker git-flow grunt npm pel pip python tmux screen ssh-agent sudo symfony2 termitator debian gem ruby git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -73,8 +73,8 @@ export  SAVEHIST=4096
 
 # SSH agent / KEYRING
 
-which gnome-keyring-daemon 2>&1 > /dev/null && export  $(gnome-keyring-daemon --daemonize --start)
-#ssh-agent | eval
+#which gnome-keyring-daemon 2>&1 > /dev/null && export  $(gnome-keyring-daemon --daemonize --start)
+ssh-agent | eval
 
 # Key Binding
 
