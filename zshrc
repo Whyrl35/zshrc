@@ -140,6 +140,10 @@ function _update_ps1()
     then
         export PROMPT="$(~/development/zsh-powerline/zsh-powerline.py $?)"
     fi
+    else if [ -e ~/Development/zsh-powerline/zsh-powerline.py ]
+    then
+        export PROMPT="$(~/Development/zsh-powerline/zsh-powerline.py $?)"
+    fi
 }
 precmd()
 {
