@@ -74,7 +74,7 @@ export  SAVEHIST=4096
 # SSH agent / KEYRING
 
 #which gnome-keyring-daemon 2>&1 > /dev/null && export  $(gnome-keyring-daemon --daemonize --start)
-ssh-agent | eval
+#ssh-agent | eval
 
 # Key Binding
 
@@ -139,8 +139,7 @@ function _update_ps1()
     if [ -e ~/development/zsh-powerline/zsh-powerline.py ]
     then
         export PROMPT="$(~/development/zsh-powerline/zsh-powerline.py $?)"
-    fi
-    else if [ -e ~/Development/zsh-powerline/zsh-powerline.py ]
+    elif [ -e ~/Development/zsh-powerline/zsh-powerline.py ]
     then
         export PROMPT="$(~/Development/zsh-powerline/zsh-powerline.py $?)"
     fi
