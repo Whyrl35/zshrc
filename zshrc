@@ -139,7 +139,7 @@ function _update_ps1()
     if [ -e ~/development/zsh-powerline/zsh-powerline.py ]
     then
         export PROMPT="$(~/development/zsh-powerline/zsh-powerline.py $?)"
-    else if [ -e ~/Development/zsh-powerline/zsh-powerline.py ]
+    elif [ -e ~/Development/zsh-powerline/zsh-powerline.py ]
     then
         export PROMPT="$(~/Development/zsh-powerline/zsh-powerline.py $?)"
     fi
