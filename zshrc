@@ -150,7 +150,7 @@ precmd()
 #                        OVH Conf                           #
 #############################################################
 
-if [[ $(hostname) = "desk"* ]]
+if [[ $(hostname) = "desk"* ]] || [[ $(hostname) = "LAPTOP"* ]]
 then
     source ~/.ovhrc
 fi
