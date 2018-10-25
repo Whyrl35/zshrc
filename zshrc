@@ -63,9 +63,9 @@ function salt-encryt {
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-
 #ZSH_THEME="blinks"
 #ZSH_THEME="agnoster"
+ZSH_THEME="whyrl"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -142,33 +142,10 @@ zstyle ':completion:*:processes' list-colors '=(#b)(?????)(#B)??????????????????
 =01;31=01;33'
 
 #############################################################
-#                     PowerLine Conf                        #
-#############################################################
-
-# powerline can be found here :
-# https://github.com/carlcarl/powerline-zsh
-# mkdir -p development && cd development && git clone https://github.com/carlcarl/powerline-zsh
-
-function _update_ps1()
-{
-    if [ -e ~/development/zsh-powerline/zsh-powerline.py ]
-    then
-        export PROMPT="$(~/development/zsh-powerline/zsh-powerline.py $?)"
-    elif [ -e ~/Development/zsh-powerline/zsh-powerline.py ]
-    then
-        export PROMPT="$(~/Development/zsh-powerline/zsh-powerline.py $?)"
-    fi
-}
-precmd()
-{
-    _update_ps1
-}
-
-#############################################################
 #                        OVH Conf                           #
 #############################################################
 
-if [[ $(hostname) = "desk"* ]] || [[ $(hostname) = "LAPTOP"* ]]
+if [[ $(hostname) = "desk"* ]] || [[ $(hostname) = "LAPTOP"* ]] || [[ $(hostname) = "laptop"* ]]
 then
     source ~/.ovhrc
 fi
