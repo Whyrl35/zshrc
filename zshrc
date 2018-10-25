@@ -39,6 +39,15 @@ alias vi='vim'
 
 alias keepass='kp -d ~/hubic/OVH/Keepass/keepassx.kdb'
 
+function salt-encryt {
+	if [ -n "${1}" ]
+	then
+		echo -n "${1}" | gpg --armor --batch --trust-model always --encrypt -r saltmaster
+	else
+		echo "You must provide a text to encryt as parameter (between '\"' if there is space in it)."
+	fi
+}
+
 #############################################################
 #                       Oh My ZSH                           #
 #############################################################
@@ -50,7 +59,7 @@ alias keepass='kp -d ~/hubic/OVH/Keepass/keepassx.kdb'
 ZSH=$HOME/.oh-my-zsh
 
 #ZSH_THEME="blinks"
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
