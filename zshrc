@@ -20,7 +20,13 @@ limit   core 0
 
 alias goaccess='goaccess -i -m --double-decode -a --log-format="%h %^[%d:%t %^] \"%r\" %s %b \"%R\" \"%u\"" --date-format="%d/%b/%Y" --time-format="%H:%M:%S"'
 
-alias ls='ls --color'
+if [[ $(uname) == "Darwin" ]]
+then
+	alias ls='ls -G'
+else
+	alias ls='ls --color'
+fi
+
 alias grep='grep --color=auto'
 
 alias h='fc -l'
@@ -162,7 +168,7 @@ precmd()
 #                        OVH Conf                           #
 #############################################################
 
-if [[ $(hostname) = "desk"* ]]
+if [[ $(hostname) = "desk"* ]] || [[ $(hostname) = "LAPTOP"* ]]
 then
     source ~/.ovhrc
 fi
