@@ -70,7 +70,7 @@ ZSH_THEME="whyrl"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bgnotify bower celery coffe colorize cp django docker git-flow grunt npm pel pip python tmux screen ssh-agent sudo symfony2 termitator debian gem ruby git)
+plugins=(bgnotify bower celery colorize cp django docker git-flow grunt npm pip python ssh-agent sudo debian gem ruby git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -140,12 +140,3 @@ zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:processes' list-colors '=(#b)(?????)(#B)?????????????????????????????????([^ ]#/)#(#b)([^ /]#)*=00
 =01;31=01;33'
-
-#############################################################
-#                        OVH Conf                           #
-#############################################################
-
-if [[ $(hostname) = "desk"* ]] || [[ $(hostname) = "LAPTOP"* ]] || [[ $(hostname) = "laptop"* ]]
-then
-    source ~/.ovhrc
-fi
