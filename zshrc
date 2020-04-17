@@ -11,14 +11,13 @@ export TERM='xterm-256color'
 
 # Customize to your needs...
 export PATH=$HOME/.local/bin:/usr/local/rvm/bin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl
+source /etc/profile.d/apps-bin-path.sh
 
 # umask and nocore
 umask   022
 limit   core 0
 
 # Alias
-
-alias goaccess='goaccess -i -m --double-decode -a --log-format="%h %^[%d:%t %^] \"%r\" %s %b \"%R\" \"%u\"" --date-format="%d/%b/%Y" --time-format="%H:%M:%S"'
 
 if [[ $(uname) == "Darwin" ]]
 then
@@ -42,8 +41,6 @@ alias mkdir='nocorrect mkdir'   # no spelling correction on mkdir
 
 alias v='vim'
 alias vi='vim'
-
-alias keepass='kp -d ~/hubic/OVH/Keepass/keepassx.kdb'
 
 function salt-encryt {
 	if [ -n "${1}" ]
@@ -70,7 +67,7 @@ ZSH_THEME="whyrl"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bgnotify bower celery colorize cp django docker git-flow grunt npm pip python ssh-agent sudo debian gem ruby git zsh-syntax-highlighting)
+plugins=(bgnotify bower celery colorize cp django docker git-flow grunt npm pip python sudo debian gem ruby git zsh-syntax-highlighting sgc)
 
 source $ZSH/oh-my-zsh.sh
 
