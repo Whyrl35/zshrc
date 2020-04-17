@@ -11,7 +11,6 @@ export TERM='xterm-256color'
 
 # Customize to your needs...
 export PATH=$HOME/.local/bin:/usr/local/rvm/bin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl
-source /etc/profile.d/apps-bin-path.sh
 
 # umask and nocore
 umask   022
@@ -137,3 +136,12 @@ zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:processes' list-colors '=(#b)(?????)(#B)?????????????????????????????????([^ ]#/)#(#b)([^ /]#)*=00
 =01;31=01;33'
+
+
+#############################################################
+#                      Load local Conf                      #
+#############################################################
+if [ -e ~/.local/zsh/rc ]
+then
+    source ~/.local/zsh/rc
+fi
