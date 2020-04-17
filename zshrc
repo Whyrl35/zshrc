@@ -27,8 +27,6 @@ fi
 
 alias grep='grep --color=auto'
 
-alias h='fc -l'
-alias j=jobs
 alias ll='ls -laFo'
 alias l='ls -l'
 alias lsd='ls -ld *(/)'
@@ -59,14 +57,24 @@ function salt-encryt {
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-#ZSH_THEME="blinks"
-#ZSH_THEME="agnoster"
 ZSH_THEME="whyrl"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bgnotify bower celery colorize cp django docker git-flow grunt npm pip python sudo debian gem ruby git zsh-syntax-highlighting sgc)
+plugins=(bgnotify bower celery colorize cp django docker git-flow grunt npm pip python sudo debian gem ruby git)
+
+#############################################################
+#                      Load local Conf                      #
+#############################################################
+if [ -e ~/.local/zsh/rc ]
+then
+    source ~/.local/zsh/rc
+fi
+
+#############################################################
+#                       Startup OMZ                         #
+#############################################################
 
 source $ZSH/oh-my-zsh.sh
 
@@ -136,12 +144,3 @@ zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:processes' list-colors '=(#b)(?????)(#B)?????????????????????????????????([^ ]#/)#(#b)([^ /]#)*=00
 =01;31=01;33'
-
-
-#############################################################
-#                      Load local Conf                      #
-#############################################################
-if [ -e ~/.local/zsh/rc ]
-then
-    source ~/.local/zsh/rc
-fi
