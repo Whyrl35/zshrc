@@ -63,7 +63,7 @@ ZSH_THEME="whyrl"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bgnotify bower celery colorize cp django docker git-flow grunt npm pip python sudo debian gem ruby git)
+plugins=(bgnotify colorize cp docker git-flow pip python sudo debian gem ruby git)
 
 #############################################################
 #                      Load local Conf                      #
