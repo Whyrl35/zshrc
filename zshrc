@@ -68,9 +68,9 @@ plugins=(bgnotify colorize cp docker git-flow pip python sudo debian gem ruby gi
 #############################################################
 #                      Load local Conf                      #
 #############################################################
-if [ -e ~/.local/zsh/rc ]
+if [ -e ~/.zshrc.local ]
 then
-    source ~/.local/zsh/rc
+    source ~/.zshrc.local
 fi
 
 #############################################################
