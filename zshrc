@@ -40,6 +40,9 @@ alias mkdir='nocorrect mkdir'   # no spelling correction on mkdir
 alias v='vim'
 alias vi='vim'
 
+alias catt='batcat'
+alias exa='exa -bghHliS'
+
 function salt-encryt {
 	if [ -n "${1}" ]
 	then
